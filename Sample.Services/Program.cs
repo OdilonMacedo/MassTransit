@@ -52,7 +52,7 @@ namespace Sample.Service
         {
             return Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
-                cfg.ConfigureEndpoints((IBusRegistrationContext)provider);
+                cfg.ConfigureEndpoints(provider);
             });
         }
     }
