@@ -1,0 +1,12 @@
+C:\Users\settl\source\repos\MassTransit\Sample.Contracts\bin\Debug\net6.0\Sample.Contracts.deps.json
+C:\Users\settl\source\repos\MassTransit\Sample.Contracts\bin\Debug\net6.0\Sample.Contracts.dll
+C:\Users\settl\source\repos\MassTransit\Sample.Contracts\bin\Debug\net6.0\Sample.Contracts.pdb
+C:\Users\settl\source\repos\MassTransit\Sample.Contracts\obj\Debug\net6.0\Sample.Contracts.csproj.AssemblyReference.cache
+C:\Users\settl\source\repos\MassTransit\Sample.Contracts\obj\Debug\net6.0\Sample.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\settl\source\repos\MassTransit\Sample.Contracts\obj\Debug\net6.0\Sample.Contracts.AssemblyInfoInputs.cache
+C:\Users\settl\source\repos\MassTransit\Sample.Contracts\obj\Debug\net6.0\Sample.Contracts.AssemblyInfo.cs
+C:\Users\settl\source\repos\MassTransit\Sample.Contracts\obj\Debug\net6.0\Sample.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\settl\source\repos\MassTransit\Sample.Contracts\obj\Debug\net6.0\Sample.Contracts.dll
+C:\Users\settl\source\repos\MassTransit\Sample.Contracts\obj\Debug\net6.0\refint\Sample.Contracts.dll
+C:\Users\settl\source\repos\MassTransit\Sample.Contracts\obj\Debug\net6.0\Sample.Contracts.pdb
+C:\Users\settl\source\repos\MassTransit\Sample.Contracts\obj\Debug\net6.0\ref\Sample.Contracts.dll
