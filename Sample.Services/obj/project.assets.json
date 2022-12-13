@@ -2175,19 +2175,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\settl\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\settl\\source\\repos\\MassTransit\\Sample.Services\\Sample.Services.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\MassTransit\\Sample.Services\\Sample.Services.csproj",
       "projectName": "Sample.Services",
-      "projectPath": "C:\\Users\\settl\\source\\repos\\MassTransit\\Sample.Services\\Sample.Services.csproj",
-      "packagesPath": "C:\\Users\\settl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\settl\\source\\repos\\MassTransit\\Sample.Services\\obj\\",
+      "projectPath": "C:\\Users\\User\\source\\repos\\MassTransit\\Sample.Services\\Sample.Services.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\MassTransit\\Sample.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\settl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2201,11 +2201,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\settl\\source\\repos\\MassTransit\\Sample.Components\\Sample.Components.csproj": {
-              "projectPath": "C:\\Users\\settl\\source\\repos\\MassTransit\\Sample.Components\\Sample.Components.csproj"
+            "C:\\Users\\User\\source\\repos\\MassTransit\\Sample.Components\\Sample.Components.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\MassTransit\\Sample.Components\\Sample.Components.csproj"
             },
-            "C:\\Users\\settl\\source\\repos\\MassTransit\\Sample.Contracts\\Sample.Contracts.csproj": {
-              "projectPath": "C:\\Users\\settl\\source\\repos\\MassTransit\\Sample.Contracts\\Sample.Contracts.csproj"
+            "C:\\Users\\User\\source\\repos\\MassTransit\\Sample.Contracts\\Sample.Contracts.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\MassTransit\\Sample.Contracts\\Sample.Contracts.csproj"
             }
           }
         }
@@ -2273,7 +2273,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

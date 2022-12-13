@@ -12,10 +12,6 @@
     {
         readonly ILogger<SubmitOrderConsumer> _logger;
 
-        public SubmitOrderConsumer()
-        {
-        }
-
         public SubmitOrderConsumer(ILogger<SubmitOrderConsumer> logger)
         {
             _logger = logger;
@@ -39,13 +35,12 @@
                 return;
             }
 
-            if (context.RequestId != null)
-                await context.RespondAsync<OrderSubmissionAccepted>(new
-                {
-                    InVar.Timestamp,
-                    context.Message.OrderId,
-                    context.Message.CustomerNumber
-                });
+            await context.RespondAsync<OrderSubmissionAccepted>(new
+            {
+                InVar.Timestamp,
+                context.Message.OrderId,
+                context.Message.CustomerNumber
+            });
         }
     }
 }
