@@ -7,24 +7,28 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.TryAddSingleton(KebabCaseEndpointNameFormatter.Instance);
 builder.Services.AddMassTransit(cfg =>
 {
-    //cfg.usingrabbitmq((ctx, busconfigurator) =>
-    //{
-    //    busconfigurator.host(builder.configuration.getconnectionstring("rabbitmq"));
-    //});
     cfg.AddBus(provider => Bus.Factory.CreateUsingRabbitMq());
-    cfg.AddRequestClient<SubmitOrder>();
+    //cfg.UsingInMemory((context, cfg) =>
+    //{
+    //    cfg.ConfigureEndpoints(context);
+    //});
+
+    cfg.AddRequestClient<SubmitOrder>(new Uri($"exchange:{KebabCaseEndpointNameFormatter.Instance.Consumer<SubmitOrderConsumer>()}"));
+    cfg.AddRequestClient<CheckOrder>();
 });
 
 builder.Services.AddMassTransitHostedService();
 
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

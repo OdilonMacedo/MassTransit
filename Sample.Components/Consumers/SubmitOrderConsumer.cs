@@ -24,6 +24,7 @@
             if (context.Message.CustomerNumber.Contains("TEST"))
             {
                 if (context.RequestId != null)
+                {
                     await context.RespondAsync<OrderSubmissionRejected>(new
                     {
                         InVar.Timestamp,
@@ -31,16 +32,26 @@
                         context.Message.CustomerNumber,
                         Reason = $"Test Customer cannot submit orders: {context.Message.CustomerNumber}"
                     });
-
+                }
                 return;
             }
 
-            await context.RespondAsync<OrderSubmissionAccepted>(new
+            await context.Publish<OrderSubmitedEvent>(new
             {
-                InVar.Timestamp,
+                context.Message.Timestamp,
                 context.Message.OrderId,
-                context.Message.CustomerNumber
+                context.Message.CustomerNumber,
             });
+
+            if (context.RequestId != null)
+            {
+                await context.RespondAsync<OrderSubmissionAccepted>(new
+                {
+                    InVar.Timestamp,
+                    context.Message.OrderId,
+                    context.Message.CustomerNumber,
+                });
+            }
         }
     }
 }

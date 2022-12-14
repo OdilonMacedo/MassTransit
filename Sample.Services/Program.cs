@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Sample.Components.StateMachines;
+using MassTransit.Courier.Contracts;
 
 namespace Sample.Service
 {
@@ -26,12 +28,14 @@ namespace Sample.Service
                 })
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.TryAddSingleton(KebabCaseEndpointNameFormatter.Instance); 
+                    services.TryAddSingleton(KebabCaseEndpointNameFormatter.Instance);
                     services.AddMassTransit(cfg =>
                     {
                         cfg.AddConsumersFromNamespaceContaining<SubmitOrderConsumer>();
 
-                        cfg.AddBus(ConfigureBus);
+                        cfg.AddSagaStateMachine<OrderStateMachine, OrderState>().RedisRepository();
+
+                        cfg.UsingRabbitMq(ConfigureBus);
                     });
 
                     services.AddHostedService<MassTransitConsoleHostedService>();
@@ -48,12 +52,9 @@ namespace Sample.Service
 
         }
 
-        static IBusControl ConfigureBus(IServiceProvider provider)
-        {
-            return Bus.Factory.CreateUsingRabbitMq(cfg =>
-            {
-                cfg.ConfigureEndpoints((IBusRegistrationContext)provider);
-            });
+        static void ConfigureBus(IBusRegistrationContext context, IRabbitMqBusFactoryConfigurator configurator)
+        { 
+            configurator.ConfigureEndpoints(context);
         }
     }
 }
