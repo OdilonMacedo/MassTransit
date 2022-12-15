@@ -47,7 +47,8 @@ namespace Sample.Components.StateMachines
                 {
                     OrderId = x.Instance.CorrelationId,
                     State = x.Instance.CurrentState
-                })));
+                }))
+            );
 
             DuringAny(
                 When(OrderSubmitted)
@@ -63,16 +64,5 @@ namespace Sample.Components.StateMachines
 
         public Event<OrderSubmitedEvent> OrderSubmitted { get; private set; }
         public Event<CheckOrder> OrderStatusRequest { get; private set; }
-    }
-
-    public class OrderState : SagaStateMachineInstance, ISagaVersion
-    {
-        public Guid CorrelationId { get; set; }
-        public string CurrentState { get; set; }
-
-        public DateTime Updated { get; set; }
-        public DateTime? SubmitDate { get; set; }
-        public string? CustomerNumber { get; set; }
-        public int Version { get; set; }
     }
 }

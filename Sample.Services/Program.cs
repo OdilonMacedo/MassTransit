@@ -33,7 +33,8 @@ namespace Sample.Service
                     {
                         cfg.AddConsumersFromNamespaceContaining<SubmitOrderConsumer>();
 
-                        cfg.AddSagaStateMachine<OrderStateMachine, OrderState>().RedisRepository();
+                        cfg.AddSagaStateMachine<OrderStateMachine, OrderState>(typeof(OrderStateMachineDefinition))
+                        .RedisRepository();
 
                         cfg.UsingRabbitMq(ConfigureBus);
                     });
