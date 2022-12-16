@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\MassTransit\\Sample.Contracts\\Sample.Contracts.csproj": {}
+    "C:\\Users\\settl\\source\\repos\\MassTransit\\Sample.Contracts\\Sample.Contracts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\MassTransit\\Sample.Contracts\\Sample.Contracts.csproj": {
+    "C:\\Users\\settl\\source\\repos\\MassTransit\\Sample.Contracts\\Sample.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MassTransit\\Sample.Contracts\\Sample.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\settl\\source\\repos\\MassTransit\\Sample.Contracts\\Sample.Contracts.csproj",
         "projectName": "Sample.Contracts",
-        "projectPath": "C:\\Users\\User\\source\\repos\\MassTransit\\Sample.Contracts\\Sample.Contracts.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\MassTransit\\Sample.Contracts\\obj\\",
+        "projectPath": "C:\\Users\\settl\\source\\repos\\MassTransit\\Sample.Contracts\\Sample.Contracts.csproj",
+        "packagesPath": "C:\\Users\\settl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\settl\\source\\repos\\MassTransit\\Sample.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\settl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

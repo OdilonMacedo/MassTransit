@@ -10,12 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddMassTransit(cfg =>
 {
     cfg.AddBus(provider => Bus.Factory.CreateUsingRabbitMq());
-    //cfg.UsingInMemory((context, cfg) =>
-    //{
-    //    cfg.ConfigureEndpoints(context);
-    //});
-
-    cfg.AddRequestClient<SubmitOrder>(new Uri($"exchange:{KebabCaseEndpointNameFormatter.Instance.Consumer<SubmitOrderConsumer>()}"));
+    cfg.AddRequestClient<SubmitOrder>(new Uri($"queue:{KebabCaseEndpointNameFormatter.Instance.Consumer<SubmitOrderConsumer>()}"));
     cfg.AddRequestClient<CheckOrder>();
 });
 

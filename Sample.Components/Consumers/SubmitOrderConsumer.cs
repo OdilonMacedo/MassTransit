@@ -36,7 +36,7 @@
                 return;
             }
 
-            await context.Publish<OrderSubmitedEvent>(new
+            await context.Publish<OrderSubmitted>(new
             {
                 context.Message.Timestamp,
                 context.Message.OrderId,

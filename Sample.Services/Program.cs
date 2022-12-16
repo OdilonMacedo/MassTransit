@@ -33,7 +33,7 @@ namespace Sample.Service
                     {
                         cfg.AddConsumersFromNamespaceContaining<SubmitOrderConsumer>();
 
-                        cfg.AddSagaStateMachine<OrderStateMachine, OrderState>(typeof(OrderStateMachineDefinition))
+                         cfg.AddSagaStateMachine<OrderStateMachine, OrderState>(typeof(OrderStateMachineDefinition))
                         .RedisRepository();
 
                         cfg.UsingRabbitMq(ConfigureBus);
@@ -50,7 +50,6 @@ namespace Sample.Service
                 await builder.UseWindowsService().Build().RunAsync();
             else
                 await builder.RunConsoleAsync();
-
         }
 
         static void ConfigureBus(IBusRegistrationContext context, IRabbitMqBusFactoryConfigurator configurator)

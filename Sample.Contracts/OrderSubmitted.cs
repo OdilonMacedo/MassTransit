@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sample.Components
 {
-    public interface OrderSubmitedEvent
+    public interface OrderSubmitted
     {
         Guid OrderId { get; }
         DateTime Timestamp { get; }
